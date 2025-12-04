@@ -1,158 +1,97 @@
-<div align="center">
-
-Hi there, I'm Von Breznev Mendres (馬盛中) 👋
-
-<!-- Dynamic Typing Effect for Title -->
-
-<p align="center">
-Based in <b>Tainan, Taiwan</b> • <b>4.0/4.3 GPA</b> @ STUST • <b>AI & IoT Innovator</b>
-</p>
-
-<p align="center">
-I am a Computer Science student passionate about building scalable web applications, experimenting with IoT, and training AI models. Currently expanding my expertise in <b>DevOps</b> and system integration.
-</p>
-
-<!-- Social Links -->
-
-<p align="center">
-<a href="https://www.google.com/search?q=https://von-mendres-portfolio.vercel.app">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Portfolio-von--mendres--portfolio.vercel.app-000%3Fstyle%3Dfor-the-badge%26logo%3Dvercel%26logoColor%3Dwhite" alt="Portfolio" />
-</a>
-<a href="mailto:mendresvon@gmail.com">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Email-mendresvon%2540gmail.com-D14836%3Fstyle%3Dfor-the-badge%26logo%3Dgmail%26logoColor%3Dwhite" alt="Email" />
-</a>
-</p>
-
-</div>
-
-🛠️ Tech Stack
+# Hi there, I'm Von Breznev Mendres (馬盛中) 👋
 
 <div align="center">
 
-Languages
+**Aspiring DevOps Engineer & Full-Stack Developer** *Based in Tainan City, Taiwan*
 
-Web Development
-
-Databases & Cloud
-
-AI & Tools
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Site-blue?style=for-the-badge&logo=vercel)](https://von-mendres-portfolio.vercel.app)
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail)](mailto:mendresvon@gmail.com)
 
 </div>
 
-💡 Featured Projects
+---
 
-🦅 SkyVision AI
+### 🚀 About Me
 
-Classifies birds, airplanes, and Superman with 98% accuracy.
+I am a Computer Science and Information Engineering (CSIE) student at **Southern Taiwan University of Science and Technology (STUST)** with a **GPA of 4.0/4.3**, expected to graduate in 2027.
 
-Tech: Python, PyTorch, FastAI, Gradio, Hugging Face, ResNet.
+I strive to be a **T-shaped talent** with broad foundational knowledge and deep expertise in specific areas. While I have practical experience in web development, embedded systems, and AI, my current focus is on enhancing my **DevOps capabilities**, mastering software development processes, and system integration.
 
-Highlights:
+---
 
-Trained a ResNet34 model using FastAI & PyTorch.
+### 🛠️ Technical Arsenal
 
-Deployed to Hugging Face Spaces with an interactive Gradio web app.
+| Category | Skills & Tools |
+| :--- | :--- |
+| **Languages** | Python, C, C++, Java, JavaScript, SQL |
+| **DevOps & Cloud** | Git, GitHub Actions (CI/CD), Docker, Kubernetes |
+| **Web Development** | HTML, CSS, React, Node.js, Express, Flask, MERN Stack |
+| **Database** | PostgreSQL, MongoDB |
+| **AI & ML** | PyTorch, FastAI, OpenCV, Gradio, ResNet |
+| **Hardware** | ESP32, Embedded Systems, IoT |
 
-Users can upload images and test the model in real-time.
+---
 
-🎬 Film Folio
+### 💻 Featured Projects
 
-A robust movie listing application utilizing a modern PERN stack.
+#### 🦅 SkyVision AI
+*Deep learning image classifier (Bird vs. Plane vs. Superman).*
+* **Tech:** Python, PyTorch, FastAI, Gradio, Hugging Face Spaces, ResNet34.
+* **Performance:** Trained a **ResNet34** model achieving **98% accuracy** on 3-class classification.
+* **Deployment:** Deployed to Hugging Face Spaces with an interactive **Gradio** web interface, allowing users to upload images for real-time inference.
 
-Tech: JavaScript, PostgreSQL, Express, React, Node.js, Prisma, JWT.
+#### 🚦 Smart Traffic Lights (Voice-Controlled IoT)
+*A voice-activated system controlling a 4-way intersection.*
+* **Tech:** C++, ESP32, MQTT, Android App.
+* **Features:** Developed an Android app to capture voice commands and control LED signals via MQTT.
+* **Performance:** Recognizes **13 distinct voice commands** for precise traffic control.
 
-Highlights:
+#### 🎬 Film Folio
+*A comprehensive movie listing application.*
+* **Tech:** PERN Stack (Postgres, Express, React, Node), Prisma, JWT.
+* **Scale:** Integrates with TMDB to access over **1.1 million movie records**.
+* **Security:** Implements secure authentication using JWT and bcrypt with full CRUD operations.
 
-Constructed a RESTful API with 12 endpoints.
+#### 📝 Aura Notes
+*A secure note-taking application with user management.*
+* **Tech:** MERN Stack (MongoDB, Express, React, Node), Tailwind CSS.
+* **Backend:** Built a RESTful API with 7 endpoints to manage User and Note data models.
 
-Integrated TMDB API (1.1M+ records).
+---
 
-Secure authentication via JWT & bcrypt.
+### 🔬 Experience
 
-🚦 Smart Traffic Lights
+**AI Lab Student Researcher** | *STUST* *May 2025 - Present*
+* Trained and deployed a 3-class image classification **CNN using PyTorch and FastAI**, achieving **98% accuracy** on the test set.
+* Developed computer vision tools using **OpenCV** for color-based detection and face blurring tasks.
 
-IoT voice-controlled traffic system prototype.
+---
 
-Tech: C++, ESP32, MQTT, Android Dev.
+### 📚 Education & Certifications
 
-Highlights:
+**Southern Taiwan University of Science and Technology (STUST)**
+* *B.S. in Computer Science and Information Engineering (2023 - 2027)*
 
-Real-time voice recognition for 13 distinct commands.
+**Harvard University (CS50 Coursework)**
+* *CS50x: Introduction to Computer Science*
+* *CS50P: Programming with Python*
+* *CS50T: Understanding Technology*
 
-Controls 4 sets of LED signals via MQTT protocol.
+**Professional Certifications**
+* Google Professional IT Support Certificate
+* IBM Software Engineering Certificate
 
-Custom Android app for command transmission.
+---
 
-📝 Aura Notes
+### 🌍 Languages
 
-A secure, minimalist note-taking application.
+* **English:** CEFR C2 (Native/Bilingual Proficiency)
+* **Mandarin Chinese:** TOCFL B1 (Mock test reached B2)
+* **Filipino (Tagalog):** Native/Fluent
+* **Cebuano:** Native/Fluent
 
-Tech: MERN Stack, Tailwind CSS, JWT.
-
-Highlights:
-
-RESTful API with 7 endpoints for User and Note management.
-
-Implemented secure user permission validation using Mongoose.
-
-🔬 Experience
-
-AI Lab Student Researcher
-
-
-
-
-
-Southern Taiwan University of Science and Technology | May 2025 - Present
-
-Deep Learning: Trained and deployed a CNN using PyTorch & FastAI for 3-class image classification, achieving 98% accuracy on the test set.
-
-Computer Vision: Developed CV tools using OpenCV for color-based detection and face blurring privacy features.
-
-🎓 Education & Certifications
-
-Bachelor of Science in Computer Science
-
-
-
-
-
-Southern Taiwan University of Science and Technology | 2023 - 2027
-
-
-
-
-
-🎓 GPA: 4.0/4.3
-
-Certifications:
-
-📜 IBM - Software Engineering Certificate
-
-📜 Google - Professional IT Support Certificate
-
-📜 Harvard CS50x, CS50P, CS50T
-
-🌐 Languages
-
-English: C2 (Proficient/Native level)
-
-Chinese: TOCFL B1 (Approaching B2)
-
-Filipino: Native
-
-Cebuano: Native
-
-📊 GitHub Stats
+---
 
 <div align="center">
-
+  <i>Let's connect and build something amazing!</i>
 </div>
-
-<!--
-Career Expert Tips:
-
-Remember to change YOUR_USERNAME_HERE in the stats links at the bottom!
-
-The badges use "For The Badge" style which is bold and modern.
--->
