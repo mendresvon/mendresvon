@@ -1,10 +1,33 @@
+<div align="center">
+
 Hi there, I'm Von Breznev Mendres (馬盛中) 👋
 
-🚀 Aspiring T-Shaped Engineer | Web Dev • Embedded Systems • AI • DevOps
+<!-- Dynamic Typing Effect for Title -->
 
-Based in Tainan, Taiwan, I am a Computer Science student at Southern Taiwan University of Science and Technology (STUST) with a perfect 4.0/4.3 GPA. I am passionate about building scalable web applications, experimenting with IoT, and training AI models. Currently, I am expanding my expertise in DevOps and system integration.
+<p align="center">
+Based in <b>Tainan, Taiwan</b> • <b>4.0/4.3 GPA</b> @ STUST • <b>AI & IoT Innovator</b>
+</p>
+
+<p align="center">
+I am a Computer Science student passionate about building scalable web applications, experimenting with IoT, and training AI models. Currently expanding my expertise in <b>DevOps</b> and system integration.
+</p>
+
+<!-- Social Links -->
+
+<p align="center">
+<a href="https://www.google.com/search?q=https://von-mendres-portfolio.vercel.app">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Portfolio-von--mendres--portfolio.vercel.app-000%3Fstyle%3Dfor-the-badge%26logo%3Dvercel%26logoColor%3Dwhite" alt="Portfolio" />
+</a>
+<a href="mailto:mendresvon@gmail.com">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Email-mendresvon%2540gmail.com-D14836%3Fstyle%3Dfor-the-badge%26logo%3Dgmail%26logoColor%3Dwhite" alt="Email" />
+</a>
+</p>
+
+</div>
 
 🛠️ Tech Stack
+
+<div align="center">
 
 Languages
 
@@ -13,6 +36,8 @@ Web Development
 Databases & Cloud
 
 AI & Tools
+
+</div>
 
 💡 Featured Projects
 
@@ -72,8 +97,13 @@ Implemented secure user permission validation using Mongoose.
 
 🔬 Experience
 
-AI Lab Student Researcher | Southern Taiwan University of Science and Technology
-May 2025 - Present
+AI Lab Student Researcher
+
+
+
+
+
+Southern Taiwan University of Science and Technology | May 2025 - Present
 
 Deep Learning: Trained and deployed a CNN using PyTorch & FastAI for 3-class image classification, achieving 98% accuracy on the test set.
 
@@ -81,7 +111,18 @@ Computer Vision: Developed CV tools using OpenCV for color-based detection and f
 
 🎓 Education & Certifications
 
-Bachelor of Science in Computer Science 🏛️ Southern Taiwan University of Science and Technology | 2023 - 2027
+Bachelor of Science in Computer Science
+
+
+
+
+
+Southern Taiwan University of Science and Technology | 2023 - 2027
+
+
+
+
+
 🎓 GPA: 4.0/4.3
 
 Certifications:
@@ -104,12 +145,14 @@ Cebuano: Native
 
 📊 GitHub Stats
 
-📫 Let's Connect!
+<div align="center">
+
+</div>
 
 <!--
-Profile Tips from your Career Expert:
+Career Expert Tips:
 
-Replace YOUR_USERNAME_HERE in the stats links with your actual GitHub username.
+Remember to change YOUR_USERNAME_HERE in the stats links at the bottom!
 
-If you have links to the specific repos for Film Folio/Aura Notes, update the (https://github.com/...) links in the Projects section.
+The badges use "For The Badge" style which is bold and modern.
 -->
