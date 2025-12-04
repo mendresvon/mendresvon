@@ -2,10 +2,13 @@
 
 <div align="center">
 
-**Aspiring DevOps Engineer & Full-Stack Developer** *Based in Tainan City, Taiwan*
+**Aspiring DevOps Engineer & Software Engineer**
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Site-blue?style=for-the-badge&logo=vercel)](https://von-mendres-portfolio.vercel.app)
-[![Email](https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail)](mailto:mendresvon@gmail.com)
+### 📫 Contact
+
+* 📧 **Email:** [mendresvon@gmail.com](mailto:mendresvon@gmail.com)
+* 🌐 **Portfolio:** [von-mendres-portfolio.vercel.app](https://von-mendres-portfolio.vercel.app)
+* 📱 **Phone:** +886 902 405 107
 
 </div>
 
@@ -15,7 +18,7 @@
 
 I am a Computer Science and Information Engineering (CSIE) student at **Southern Taiwan University of Science and Technology (STUST)** with a current **GPA of 4.0**, expected to graduate in 2027.
 
-I strive to be a **T-shaped talent** with broad foundational knowledge and deep expertise in specific areas. While I have practical experience in web development, embedded systems, and AI, my current focus is on enhancing my **DevOps capabilities**, mastering software development processes, and system integration.
+I strive to be a **T-shaped Engineer** with broad foundational knowledge and deep expertise in specific areas. While I have practical experience in web development, embedded systems, and AI, my current focus is on enhancing my **DevOps capabilities**, mastering software development processes, and system integration.
 
 ---
 
@@ -90,6 +93,15 @@ I strive to be a **T-shaped talent** with broad foundational knowledge and deep 
 * **Cebuano:** Native/Fluent
 
 ---
+
+### 🤝 Volunteer Work
+
+**Catholic Parish Volunteer**
+* Assisted in community events (e.g., beach cleanups) to promote environmental sustainability.
+* Served as lector & acolyte; trained new volunteers in liturgical roles to ensure smooth ceremonies.
+
+---
+
 
 <div align="center">
   <i>Let's connect and build something amazing!</i>
