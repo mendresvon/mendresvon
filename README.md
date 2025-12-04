@@ -13,7 +13,7 @@
 
 ### 🚀 About Me
 
-I am a Computer Science and Information Engineering (CSIE) student at **Southern Taiwan University of Science and Technology (STUST)** with a current **GPA of 4.0/4.3**, expected to graduate in 2027.
+I am a Computer Science and Information Engineering (CSIE) student at **Southern Taiwan University of Science and Technology (STUST)** with a current **GPA of 4.0**, expected to graduate in 2027.
 
 I strive to be a **T-shaped talent** with broad foundational knowledge and deep expertise in specific areas. While I have practical experience in web development, embedded systems, and AI, my current focus is on enhancing my **DevOps capabilities**, mastering software development processes, and system integration.
 
