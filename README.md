@@ -13,22 +13,21 @@
 
 ### 🚀 About Me
 
-I am a Computer Science and Information Engineering (CSIE) student at **Southern Taiwan University of Science and Technology (STUST)** with a **GPA of 4.0/4.3**, expected to graduate in 2027.
+I am a Computer Science and Information Engineering (CSIE) student at **Southern Taiwan University of Science and Technology (STUST)** with a current **GPA of 4.0/4.3**, expected to graduate in 2027.
 
 I strive to be a **T-shaped talent** with broad foundational knowledge and deep expertise in specific areas. While I have practical experience in web development, embedded systems, and AI, my current focus is on enhancing my **DevOps capabilities**, mastering software development processes, and system integration.
 
 ---
 
-### 🛠️ Technical Arsenal
+### 🛠️ Tech Stack
 
 | Category | Skills & Tools |
 | :--- | :--- |
-| **Languages** | Python, C, C++, Java, JavaScript, SQL |
-| **DevOps & Cloud** | Git, GitHub Actions (CI/CD), Docker, Kubernetes |
-| **Web Development** | HTML, CSS, React, Node.js, Express, Flask, MERN Stack |
-| **Database** | PostgreSQL, MongoDB |
-| **AI & ML** | PyTorch, FastAI, OpenCV, Gradio, ResNet |
-| **Hardware** | ESP32, Embedded Systems, IoT |
+| **Languages** | Python, C, SQL, JavaScript, C++, Java|
+| **DevOps Tools** | Git, GitHub Actions (CI/CD), Docker, Kubernetes|
+| **Database** | MongoDB, PostgreSQL|
+| **Web Development** | HTML, CSS, MERN, PERN, Flask, Django|
+| **AI & ML** | PyTorch, FastAI, OpenCV|
 
 ---
 
