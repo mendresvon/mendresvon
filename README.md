@@ -8,7 +8,7 @@
 * 📱 **Phone:** +886 902 405 107
 
 
---
+---
 
 ### 🚀 About Me
 
@@ -18,15 +18,19 @@ I strive to be a **T-shaped Engineer** with broad foundational knowledge and dee
 
 ---
 
-### 🛠️ Tech Stack
+### 📚 Education & Certifications
 
-| Category | Skills & Tools |
-| :--- | :--- |
-| **Languages** | Python, C, SQL, JavaScript, C++, Java|
-| **DevOps Tools** | Git, GitHub Actions (CI/CD), Docker, Kubernetes|
-| **Database** | MongoDB, PostgreSQL|
-| **Web Development** | HTML, CSS, MERN, PERN, Flask, Django|
-| **AI & ML** | PyTorch, FastAI, OpenCV|
+**Southern Taiwan University of Science and Technology (STUST)**
+* *B.S. in Computer Science and Information Engineering (2023 - 2027)*
+
+**Harvard University (CS50 Coursework)**
+* *CS50x: Introduction to Computer Science*
+* *CS50P: Programming with Python*
+* *CS50T: Understanding Technology*
+
+**Professional Certifications**
+* Google Professional IT Support Certificate
+* IBM Software Engineering Certificate
 
 ---
 
@@ -65,19 +69,15 @@ I strive to be a **T-shaped Engineer** with broad foundational knowledge and dee
 
 ---
 
-### 📚 Education & Certifications
+### 🛠️ Tech Stack
 
-**Southern Taiwan University of Science and Technology (STUST)**
-* *B.S. in Computer Science and Information Engineering (2023 - 2027)*
-
-**Harvard University (CS50 Coursework)**
-* *CS50x: Introduction to Computer Science*
-* *CS50P: Programming with Python*
-* *CS50T: Understanding Technology*
-
-**Professional Certifications**
-* Google Professional IT Support Certificate
-* IBM Software Engineering Certificate
+| Category | Skills & Tools |
+| :--- | :--- |
+| **Languages** | Python, C, SQL, JavaScript, C++, Java|
+| **DevOps Tools** | Git, GitHub Actions (CI/CD), Docker, Kubernetes|
+| **Database** | MongoDB, PostgreSQL|
+| **Web Development** | HTML, CSS, MERN, PERN, Flask, Django|
+| **AI & ML** | PyTorch, FastAI, OpenCV|
 
 ---
 
