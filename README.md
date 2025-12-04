@@ -1,4 +1,4 @@
-# Hi there, I'm Von Breznev Mendres (馬盛中) 👋
+# Von Breznev Mendres (馬盛中) 👋
 **Aspiring DevOps Engineer & Software Engineer**
 
 ### 📫 Contact
@@ -6,6 +6,8 @@
 * 📧 **Email:** [mendresvon@gmail.com](mailto:mendresvon@gmail.com)
 * 🌐 **Portfolio:** [von-mendres-portfolio.vercel.app](https://von-mendres-portfolio.vercel.app)
 * 📱 **Phone:** +886 902 405 107
+
+
 ---
 
 ### 🚀 About Me
