@@ -158,18 +158,7 @@ I'm a CS student who believes in being a **T-shaped engineer** — broad foundat
 </tr>
 </table>
 
----
 
-### 📊 GitHub Stats
-
-<div align="center">
-  
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=mendresvon&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00C7B7&icon_color=00C7B7" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mendresvon&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00C7B7" />
-
-</div>
-
----
 
 ### 🌍 Languages
 
