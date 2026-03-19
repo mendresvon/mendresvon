@@ -17,7 +17,7 @@
 ```typescript
 const von = {
   location: "Taiwan 🇹🇼",
-  education: "B.S. Computer Science @ STUST (GPA: 4.0/4.3)",
+  education: "B.S. Computer Science @ STUST (GPA: 4.07/4.3)",
   graduation: 2027,
   languages: ["English (C2)", "Mandarin (B1+)", "Filipino", "Cebuano"],
   currentFocus: ["Cloud-Native Development", "DevOps", "System Design"],
