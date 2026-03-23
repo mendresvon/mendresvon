@@ -21,7 +21,7 @@ const von = {
   graduation: 2027,
   languages: ["English (C2)", "Mandarin (B1+)", "Filipino", "Cebuano"],
   currentFocus: ["Cloud-Native Development", "DevOps", "System Design"],
-  funFact: "I teach English part-time while building full-stack apps 🚀"
+  funFact: "I teach English part-time while being a student engineer 🚀"
 };
 ```
 
