@@ -4,6 +4,9 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://von-mendres-portfolio.vercel.app)
 
+### Built through discipline, proven through results.
+### 以自律奠基，以成果驗證
+
 </div>
 
 ---
@@ -29,9 +32,6 @@ I'm not looking for an easy internship. I'm looking for one where I'll be challe
 ---
 
 <div align="center">
-
-### Built through discipline, proven through results.
-### 以自律奠基，以成果驗證
 
 <img src="https://komarev.com/ghpvc/?username=mendresvon&color=00C7B7&style=flat-square&label=Profile+Views" alt="Profile Views" />
 
