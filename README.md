@@ -6,11 +6,6 @@
 
 ### Built through discipline, proven through results.
 
-<br/>
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mendresvon&show_icons=true&theme=github_dark&hide_border=true&title_color=00C7B7&icon_color=00C7B7&bg_color=0d1117)
-![GitHub Streak](https://streak-stats.demolab.com?user=mendresvon&theme=tokyonight-duo&hide_border=true)
-
 </div>
 
 ---
