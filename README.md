@@ -2,7 +2,7 @@
 
 # Von Breznev Mendres
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://von-mendres-portfolio.vercel.app)
+[![Portfolio](https://img.shields.io/badge/🌐%20Portfolio-von--mendres--portfolio.vercel.app-0d1117?style=flat-square&logoColor=white)](https://von-mendres-portfolio.vercel.app)
 
 ### Built through discipline, proven through results.
 
@@ -22,6 +22,6 @@ I'm looking for an internship. BUT. I'm not looking for an easy internship. I'm 
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=mendresvon&color=00C7B7&style=flat-square&label=Profile+Views" alt="Profile Views" />
+<img src="https://komarev.com/ghpvc/?username=mendresvon&color=808080&style=flat-square&label=views" alt="Profile Views" />
 
 </div>
