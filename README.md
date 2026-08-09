@@ -21,7 +21,7 @@ I'm a Filipino CS student at Southern Taiwan University of Science and Technolog
 | 🖼️ [**Semantic-Segmentation-with-U-NET-Architecture**](https://github.com/mendresvon/Semantic-Segmentation-with-U-NET-Architecture) | U-Net with a ResNet34 backbone for pixel-level segmentation of driving scenes (CamVid), reaching 83.5% pixel accuracy and 0.815 Dice. |
 | ⚙️ [**AlgoTriad-CLI**](https://github.com/mendresvon/AlgoTriad-CLI) | Interactive CLI implementing Binary Search, Quick Sort, and Dijkstra's algorithm with full unit test coverage and Ruff-enforced linting. |
 | 🎬 [**FilmFolio**](https://github.com/mendresvon/FilmFolio) | Full-stack movie watchlist app — React/Vite frontend, Express/MongoDB/Redis backend, JWT auth, Dockerized and deployed on Google Cloud Run with CI/CD via GitHub Actions. |
-| 📝 [**Aura-Notes**](https://github.com/mendresvon/Aura-Notes) | MERN-stack note-taking app with a Google Keep-style masonry layout, JWT auth, and a fully documented REST API. |
+| 🏠 [**Dorm_IoT_System**](https://github.com/mendresvon/Dorm_IoT_System) | End-to-end IoT system for smart dormitory management — ESP32 firmware talking MQTT to a Node.js backend, with RFID access control, real-time parent notifications, and a web dashboard with a digital-twin fallback for the physical door lock. |
 | 🌐 [**von-portfolio-v2**](https://github.com/mendresvon/von-portfolio-v2) | This portfolio site — Next.js 15 + TypeScript, bilingual (EN/中文), deployed on Vercel. |
 
 ## Tech Stack
