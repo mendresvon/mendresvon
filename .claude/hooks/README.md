@@ -34,9 +34,20 @@ redrawn frames of the same line.
 
 ## Install
 
+From a checkout:
+
 ```bash
 .claude/hooks/install.sh
 ```
+
+Or on any machine, with nothing checked out:
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mendresvon/mendresvon/a143c53d46bde7c417c590f911395fa70972fdcb/.claude/hooks/install.sh)"
+```
+
+(that URL is pinned to a commit, so it can't drift or be served stale from a CDN
+cache; swap the SHA for a branch name to always take the newest.)
 
 That copies the script to `~/.claude/hooks/` and adds the hook to your user-level
 `~/.claude/settings.json`, which applies to **every project and every new session**
