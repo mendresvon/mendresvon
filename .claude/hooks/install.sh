@@ -6,11 +6,22 @@
 #   ./install.sh --uninstall  remove the hook entry (leaves the script in place)
 #   ./install.sh --quiet      no output unless something changed or failed
 #
+# Also works standalone, with nothing checked out:
+#   curl -fsSL <raw-url>/install.sh | bash
+#
 # Idempotent: re-running updates the existing entry instead of adding a second
 # one, and never rewrites the rest of your settings.
 set -euo pipefail
 
-SRC_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# When piped from curl there is no script directory; fall back to downloading.
+if [ -r "${BASH_SOURCE[0]:-}" ]; then
+  SRC_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+else
+  SRC_DIR=""
+fi
+QUIET_REPO="${QUIET_REPO:-mendresvon/mendresvon}"
+QUIET_REF="${QUIET_REF:-claude/global-command-output-filter-n075u3}"
+QUIET_SRC_URL="${QUIET_SRC_URL:-https://raw.githubusercontent.com/$QUIET_REPO/$QUIET_REF/.claude/hooks/quiet-output.py}"
 CONFIG_HOME="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
 HOOK_DIR="$CONFIG_HOME/hooks"
 HOOK="$HOOK_DIR/quiet-output.py"
@@ -32,11 +43,27 @@ command -v python3 >/dev/null || { echo "quiet-output needs python3 on PATH" >&2
 
 if [ "$MODE" = "install" ]; then
   mkdir -p "$HOOK_DIR"
-  if [ ! -f "$SRC_DIR/quiet-output.py" ]; then
-    echo "quiet-output.py not found next to install.sh" >&2; exit 1
+  STAGED=""
+  if [ -n "$SRC_DIR" ] && [ -f "$SRC_DIR/quiet-output.py" ]; then
+    STAGED="$SRC_DIR/quiet-output.py"
+  else
+    STAGED="$(mktemp)"; trap 'rm -f "$STAGED"' EXIT
+    say "fetching quiet-output.py from $QUIET_SRC_URL"
+    if command -v curl >/dev/null; then
+      curl -fsSL "$QUIET_SRC_URL" -o "$STAGED"
+    elif command -v wget >/dev/null; then
+      wget -qO "$STAGED" "$QUIET_SRC_URL"
+    else
+      echo "need curl or wget to fetch quiet-output.py, or run install.sh from a checkout" >&2
+      exit 1
+    fi
   fi
-  if ! cmp -s "$SRC_DIR/quiet-output.py" "$HOOK" 2>/dev/null; then
-    cp "$SRC_DIR/quiet-output.py" "$HOOK"
+  # never install something that is not a working script
+  if ! python3 -c "import sys,py_compile; py_compile.compile(sys.argv[1], doraise=True)" "$STAGED" >/dev/null 2>&1; then
+    echo "downloaded quiet-output.py is not valid Python — refusing to install" >&2; exit 1
+  fi
+  if ! cmp -s "$STAGED" "$HOOK" 2>/dev/null; then
+    cp "$STAGED" "$HOOK"
     say "installed $HOOK"
   fi
   chmod +x "$HOOK"
