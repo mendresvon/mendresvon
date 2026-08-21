@@ -14,10 +14,14 @@
 set -euo pipefail
 
 # When piped from curl there is no script directory; fall back to downloading.
-if [ -r "${BASH_SOURCE[0]:-}" ]; then
-  SRC_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-else
-  SRC_DIR=""
+# BASH_SOURCE is unset in that case, which is fatal under `set -u` on older bash,
+# so read it with -u disabled.
+set +u
+_self="${BASH_SOURCE[0]}"
+set -u
+SRC_DIR=""
+if [ -n "$_self" ] && [ -r "$_self" ]; then
+  SRC_DIR="$(cd "$(dirname "$_self")" && pwd)"
 fi
 QUIET_REPO="${QUIET_REPO:-mendresvon/mendresvon}"
 QUIET_REF="${QUIET_REF:-claude/global-command-output-filter-n075u3}"
