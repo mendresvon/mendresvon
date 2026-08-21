@@ -35,33 +35,31 @@ redrawn frames of the same line.
 ## Install
 
 ```bash
-cp quiet-output.py ~/.claude/hooks/quiet-output.py
-chmod +x ~/.claude/hooks/quiet-output.py
+.claude/hooks/install.sh
 ```
 
-Then in `~/.claude/settings.json`:
+That copies the script to `~/.claude/hooks/` and adds the hook to your user-level
+`~/.claude/settings.json`, which applies to **every project and every new session**
+on that machine. It is idempotent: re-running updates the existing entry rather than
+adding a second one, it merges into an existing `Bash` matcher group instead of
+fragmenting your config, it backs up to `settings.json.bak` before writing, and it
+refuses to touch a settings file that is not valid JSON. `--uninstall` removes the
+entry and leaves your other hooks alone.
 
-```json
-{
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/quiet-output.py hook",
-            "timeout": 10,
-            "statusMessage": "Filtering noisy output…"
-          }
-        ]
-      }
-    ]
-  }
-}
-```
+Hooks are read at session start, so restart Claude Code (or open `/hooks`) once
+after installing.
 
-Hooks are read at session start, so restart Claude Code (or open `/hooks`) once.
+### Fresh containers and cloud sessions
+
+This repo's own `.claude/settings.json` declares the hook a second time, pointing at
+`${CLAUDE_PROJECT_DIR}/.claude/hooks/quiet-output.py`, plus a `SessionStart` hook
+that runs `install.sh --quiet`. So a session started in a fresh sandbox — where
+`~/.claude` does not exist yet — has filtering active from its first command, and
+provisions the user-level copy for the rest of that machine on the way in.
+
+Having both configured is harmless: the classifier refuses to touch a command that
+already contains `quiet-output.py`, so a command is wrapped exactly once no matter
+how many hooks fire.
 
 ## How the rewrite works
 
