@@ -27,6 +27,11 @@ Short output is never touched. If the command turns out to have printed less tha
 80 lines / 8 KB, the filter prints it back **verbatim**, byte for byte. That is
 what makes a wrong guess by the classifier harmless.
 
+The one exception: if a short output is mostly *weight* rather than *content* —
+progress-bar redraws and ANSI escapes are more than half its bytes — every line is
+still printed, but the cursor animation is dropped. Nothing is removed, only
+redrawn frames of the same line.
+
 ## Install
 
 ```bash
@@ -108,10 +113,14 @@ tool invoked with a `build` / `test` / `install` / `ci` / `compile` subcommand.
    `BUILD FAILED`, `added 44 packages`, …)
 4. Last 25 lines (where the real summary usually lives)
 
-Progress bars are collapsed (`\r` redraws keep only the final state), ANSI escapes
-are stripped, identical lines are run-length collapsed, and repeats of the same
-*shape* (same line with different numbers) are capped at 3 with a count of the rest.
-Warnings are capped at 10 so a deprecation flood cannot crowd out a real error.
+Progress bars are collapsed (`\r` redraws keep only the final state, and a drawn
+bar of box characters becomes `…`), ANSI escapes are stripped, identical lines are
+run-length collapsed, and repeats of the same *shape* (same line with different
+numbers) are capped at 3 with a count of the rest. Warnings are capped at 10 so a
+deprecation flood cannot crowd out a real error. Inside the tail, a run of 5+ lines
+sharing a first word (`Compiling …`, `Downloaded …`) collapses to first + count +
+last, so the final summary is not pushed out by repetition — error, failure and
+summary lines are exempt from that collapse.
 
 ## Escape hatches
 
@@ -139,3 +148,17 @@ Every failure path in the hook exits 0 with no output, which means "no decision"
 the command runs exactly as Claude wrote it. A bug in this script can never block
 or corrupt a tool call. If the filter itself throws, it prints the error and then
 the raw output it had buffered.
+
+
+## Measured on real commands
+
+| Command | Raw | Through the hook | |
+| --- | --- | --- | --- |
+| `cargo test --release` (rtk's own suite, 2 633 tests, 1 failing) | 2 916 lines / 203 KB | 44 lines / 3.0 KB | 98.5% smaller |
+| `cargo build --release` (450 crates) | 285 lines / 8.7 KB | 8 lines / 0.4 KB | 96% smaller |
+| `pip download pandas` (over a pty, 31 progress redraws) | 21 lines / 4.4 KB | 21 lines / 1.8 KB | 60% smaller, every line kept |
+| `npx vitest run` (6 tests, 2 failing) | 39 lines / 1.4 KB | 39 lines / 1.4 KB | untouched — short |
+| `npm install vitest` | 7 lines / 0.2 KB | 7 lines / 0.2 KB | untouched — short |
+
+In the `cargo test` case the surviving 44 lines include the failing test name, the
+panicking `file:line`, the assertion message and the full `left:` / `right:` values.

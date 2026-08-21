@@ -424,6 +424,8 @@ def run_hook():
 
 ANSI_RE = re.compile(r"\x1b\[[0-9;?]*[ -/]*[@-~]|\x1b\][^\x07\x1b]*(?:\x07|\x1b\\)|\x1b[()][A-Za-z0-9]|\x1b[=>]")
 CTRL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
+# Long runs of box-drawing / block characters are a drawn progress bar.
+BAR_RE = re.compile("[\u2500-\u259f]{4,}")
 
 STRONG_RE = re.compile(r"""(?ix)
       \berror(s|ed)?\b | \bERR!\b | \bfail(ed|s|ure|ures|ing)?\b | \bfatal\b
@@ -451,7 +453,9 @@ SUMMARY_RE = re.compile(r"""(?ix)
     | ^={3,}.*={3,}$ | ^-{3,}\s*(coverage|summary)
 """, re.VERBOSE | re.IGNORECASE)
 
-STACK_RE = re.compile(r"^\s+(at |File \"|\.\.\.|\||\^|-->|\d+\s*\|)")
+# Any indented line right after an error is continuation: a stack frame, a
+# rustc span, an assertion's left:/right: pair, a pytest E-block.
+STACK_RE = re.compile(r"^\s+\S")
 
 
 def normalize(text):
@@ -460,6 +464,7 @@ def normalize(text):
         text = parts[-1] if parts else ""
     text = ANSI_RE.sub("", text)
     text = CTRL_RE.sub("", text)
+    text = BAR_RE.sub("\u2026", text)
     return text.rstrip()
 
 
@@ -511,8 +516,10 @@ class Digest(object):
             except Exception:
                 self.log = None
         self.n = 0
-        self.bytes = 0
+        self.bytes = 0              # raw bytes in
+        self.norm_bytes = 0         # bytes after collapsing \r redraws and ANSI
         self.raw = []               # verbatim buffer, only while short
+        self.norm = []              # same lines, normalized, only while short
         self.overflow = False
         self.head = []
         self.kept = []              # (lineno, text)
@@ -536,12 +543,15 @@ class Digest(object):
                 self.log.write(raw_line)
             except Exception:
                 self.log = None
+        text = normalize(raw_line.decode("utf-8", "replace"))
+        self.norm_bytes += len(text) + 1
         if not self.overflow:
             self.raw.append(raw_line)
-            if self.n > PASSTHROUGH_LINES or self.bytes > PASSTHROUGH_BYTES:
+            self.norm.append(text)
+            if self.n > PASSTHROUGH_LINES or self.norm_bytes > PASSTHROUGH_BYTES:
                 self.overflow = True
                 self.raw = []
-        text = normalize(raw_line.decode("utf-8", "replace"))
+                self.norm = []
         if len(self.head) < HEAD_LINES and text.strip():
             self.head.append((self.n, clip(text)))
         if text.strip():
@@ -600,10 +610,21 @@ class Digest(object):
                 self.log.close()
             except Exception:
                 pass
-        # short output: hand it back untouched
+        # short output: hand it back untouched...
         if not self.overflow and not interrupted:
-            for raw_line in self.raw:
-                out.write(raw_line)
+            if self.bytes <= 2 * self.norm_bytes + 512:
+                for raw_line in self.raw:
+                    out.write(raw_line)
+                out.flush()
+                return
+            # ...unless most of its weight is progress-bar redraw and ANSI.
+            # Every line is still printed; only the cursor animation goes.
+            note = ("[quiet-output] %s: all %d lines kept, %s of progress-bar"
+                    " redraw and ANSI removed\n"
+                    % (self.label or "command", self.n,
+                       human(self.bytes - self.norm_bytes)))
+            out.write(note.encode("utf-8", "replace"))
+            out.write(("\n".join(self.norm) + "\n").encode("utf-8", "replace"))
             out.flush()
             return
 
